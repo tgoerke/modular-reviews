@@ -1,0 +1,211 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Atmospheric computing research proposal exploring interconnected computing islands and cloud infrastructures enabled by open social protocols." />
+		<title>Atmospheric Computing Research Proposal</title>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Atmospheric Computing Research Proposal</h1>
+			</header>
+
+			<section class="intro">
+				<p>
+					Atmospheric computing is an emerging paradigm that describes the interconnection of previously isolated computing islands and cloud infrastructures that store data. This interconnection is enabled by emerging open social protocols such as ATProto, which provide the fabric for a decentralized yet interoperable ecosystem.
+				</p>
+				<p>
+					These interconnected but independent islands of data and compute resources, together with their corresponding user-facing applications, collectively form what we call the <strong>Atmosphere</strong>.
+				</p>
+				<p>
+					Atmospheric computing combines a protocol-mediated approach with <strong>networked publics</strong> to create an environment attractive to researchers, technologists, and users who seek more tangible and meaningful interactions in the digital space.
+				</p>
+			</section>
+
+			<section class="pillars">
+				<h2>We propose four main pillars:</h2>
+
+				<article class="pillar">
+					<h3>1. Atmospheric Reviews</h3>
+					<p>
+						Will address the challenge of evaluating research and technology within the Atmosphere by adopting modular review techniques and workflows. Building on our work with ATScience, we aim to establish a proven, rigorous process for scientific peer review adapted to this new computational paradigm.
+					</p>
+				</article>
+
+				<article class="pillar">
+					<h3>2. Atmospheric Computer</h3>
+					<p>
+						Will establish a tilde-style community for creative computing practitioners, inspired by aesthetic.computer, fostering experimental and artistic approaches to atmospheric computing.
+					</p>
+				</article>
+
+				<article class="pillar">
+					<h3>3. ATScience</h3>
+					<p>
+						Leverages ATProto to create open, democratic, researcher-owned infrastructure for scholarly communication. By empowering science communities to maintain full control of their content and relationships while collaborating across interoperable applications, this pillar prevents vendor lock-in and fosters innovation in research tools, demonstrating how decentralized protocols can transform scholarly discourse and accelerate discovery.
+					</p>
+				</article>
+
+				<article class="pillar">
+					<h3>4. Tilde-Style Communities</h3>
+					<p>
+						Conceptualizes tildes as networked publics, with the understanding that the precise meaning of "tilde style" will evolve over time as these communities mature. <a href="http://tilde.style/" target="_blank" rel="noopener noreferrer">tilde.style</a> serves as infrastructure for building a social layer for smallweb communities based on ATProto.
+					</p>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		--color-bg: #fafafa;
+		--color-text: #1a1a1a;
+		--color-accent: #0066cc;
+		--color-accent-light: #e6f2ff;
+		--color-border: #e0e0e0;
+		--spacing-unit: 1.5rem;
+		--max-width: 900px;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-bg: #0f0f0f;
+			--color-text: #e8e8e8;
+			--color-accent: #4d9fff;
+			--color-accent-light: #1a2940;
+			--color-border: #2a2a2a;
+		}
+	}
+
+	html {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+		background: var(--color-bg);
+		color: var(--color-text);
+		line-height: 1.7;
+	}
+
+	body {
+		min-height: 100vh;
+		padding: var(--spacing-unit);
+	}
+
+	main {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: calc(var(--spacing-unit) * 2) 0;
+	}
+
+	header {
+		margin-bottom: calc(var(--spacing-unit) * 3);
+		text-align: center;
+	}
+
+	h1 {
+		font-size: clamp(1.8rem, 5vw, 3rem);
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		line-height: 1.2;
+		color: var(--color-accent);
+		margin-bottom: var(--spacing-unit);
+	}
+
+	h2 {
+		font-size: clamp(1.4rem, 4vw, 2rem);
+		font-weight: 600;
+		margin-bottom: calc(var(--spacing-unit) * 1.5);
+		letter-spacing: -0.01em;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin-bottom: 0.75rem;
+		color: var(--color-accent);
+	}
+
+	p {
+		margin-bottom: 1rem;
+		font-size: 1.05rem;
+	}
+
+	section {
+		margin-bottom: calc(var(--spacing-unit) * 3);
+	}
+
+	.intro {
+		background: var(--color-accent-light);
+		padding: calc(var(--spacing-unit) * 1.5);
+		border-radius: 12px;
+		border-left: 4px solid var(--color-accent);
+	}
+
+	.intro p:last-child {
+		margin-bottom: 0;
+	}
+
+	.pillars {
+		display: grid;
+		gap: calc(var(--spacing-unit) * 1.5);
+	}
+
+	.pillar {
+		background: var(--color-bg);
+		border: 1px solid var(--color-border);
+		padding: calc(var(--spacing-unit) * 1.25);
+		border-radius: 8px;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.pillar:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	}
+
+	.pillar p:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: var(--color-accent);
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 2px;
+		transition: text-decoration-color 0.2s ease;
+	}
+
+	a:hover {
+		text-decoration-color: transparent;
+	}
+
+	@media (max-width: 640px) {
+		body {
+			padding: 1rem;
+		}
+
+		main {
+			padding: 1.5rem 0;
+		}
+
+		.intro {
+			padding: 1.25rem;
+		}
+
+		.pillar {
+			padding: 1rem;
+		}
+	}
+</style>

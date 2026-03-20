@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmospheric Reviews — SFU Lecture 2026</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+
+  <style>
+    :root {
+      --accent: #00c9a7;
+      --accent2: #ff6b9d;
+      --accent3: #f9ca24;
+      --dim: #888;
+      --bg: #0f1117;
+      --card: #1a1e2e;
+    }
+
+    .reveal-viewport { background: var(--bg); }
+    .reveal .slides { text-align: left; }
+
+    .reveal h1 {
+      font-size: 2em;
+      color: #fff;
+      font-weight: 800;
+      line-height: 1.1;
+      text-transform: none;
+      letter-spacing: -0.02em;
+    }
+    .reveal h2 {
+      font-size: 1.3em;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 0.6em;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.2em;
+    }
+    .reveal h3 {
+      font-size: 1em;
+      color: var(--dim);
+      font-weight: 400;
+      text-transform: none;
+    }
+    .reveal p { font-size: 0.75em; line-height: 1.6; }
+    .reveal li { font-size: 0.72em; line-height: 1.7; margin-bottom: 0.2em; }
+    .reveal ul { margin-left: 1em; }
+    .reveal strong { color: var(--accent); }
+    .reveal em { color: #ccc; font-style: italic; }
+
+    blockquote {
+      background: var(--card);
+      border-left: 3px solid var(--accent);
+      padding: 0.6em 1em;
+      margin: 0.6em 0;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.7em !important;
+      line-height: 1.5;
+      color: #ddd;
+      font-style: italic;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    blockquote cite {
+      display: block;
+      margin-top: 0.4em;
+      color: var(--dim);
+      font-size: 0.85em;
+      font-style: normal;
+    }
+
+    table {
+      font-size: 0.62em;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.6em 0;
+    }
+    th {
+      background: var(--card);
+      color: var(--accent);
+      padding: 0.5em 0.8em;
+      text-align: left;
+      font-weight: 600;
+    }
+    td {
+      padding: 0.4em 0.8em;
+      border-top: 1px solid #2a2a3a;
+      color: #ccc;
+    }
+    tr:hover td { background: #1a1e2e; }
+
+    .tag {
+      display: inline-block;
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      font-size: 0.6em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+    .tag-wip { background: var(--accent2); color: #fff; }
+
+    .act-label {
+      display: inline-block;
+      font-size: 0.55em;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      padding: 0.2em 0.6em;
+      border-radius: 2px;
+      margin-bottom: 0.4em;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5em;
+      margin-top: 0.5em;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 6px;
+      padding: 0.8em 1em;
+      border-top: 2px solid var(--accent);
+    }
+    .card h4 {
+      color: var(--accent);
+      font-size: 0.7em;
+      margin: 0 0 0.4em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .card ul { margin: 0; padding-left: 1em; }
+    .card li { font-size: 0.62em; line-height: 1.5; }
+    .card p { font-size: 0.62em !important; margin: 0; color: #ccc; }
+
+    .pill {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 0.2em 0.7em;
+      font-size: 0.55em;
+      color: #aaa;
+      margin: 0.2em 0.1em;
+    }
+
+    .muted { color: var(--dim); font-size: 0.65em; }
+
+    .big-q {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.4;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.6em;
+      margin: 0.8em 0;
+    }
+
+    .title-slide { text-align: center; }
+    .title-slide h1 { font-size: 2.4em; margin-bottom: 0.2em; }
+    .title-slide .subtitle { color: var(--accent); font-size: 0.85em; margin-bottom: 1em; }
+    .title-slide .meta { color: var(--dim); font-size: 0.65em; line-height: 1.8; }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4em;
+      margin-top: 0.5em;
+    }
+    .project-item {
+      background: var(--card);
+      border-radius: 4px;
+      padding: 0.4em 0.7em;
+      font-size: 0.6em;
+    }
+    .project-item strong { color: var(--accent); display: block; }
+    .project-item span { color: #999; }
+
+    .ladder {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      margin-top: 0.5em;
+    }
+    .ladder-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8em;
+      background: var(--card);
+      border-radius: 4px;
+      padding: 0.5em 0.8em;
+    }
+    .ladder-label {
+      font-size: 0.6em;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 6.5em;
+      padding-top: 0.1em;
+      flex-shrink: 0;
+    }
+    .ladder-text { font-size: 0.6em; color: #ccc; line-height: 1.5; }
+
+    .friction-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6em;
+      margin-top: 0.5em;
+    }
+    .friction-card {
+      background: var(--card);
+      border-radius: 4px;
+      padding: 0.6em 0.8em;
+    }
+    .friction-card h4 {
+      font-size: 0.6em;
+      font-weight: 700;
+      margin: 0 0 0.3em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding-bottom: 0.2em;
+    }
+    .friction-card.green h4 { color: #00c9a7; border-bottom: 1px solid #00c9a7; }
+    .friction-card.blue h4 { color: #74b9ff; border-bottom: 1px solid #74b9ff; }
+    .friction-card.pink h4 { color: #ff6b9d; border-bottom: 1px solid #ff6b9d; }
+    .friction-card.yellow h4 { color: #f9ca24; border-bottom: 1px solid #f9ca24; }
+    .friction-card li { font-size: 0.58em; line-height: 1.6; }
+
+    .dialectic {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.6em;
+      margin-top: 0.5em;
+    }
+    .dialectic-item {
+      background: var(--card);
+      border-radius: 4px;
+      padding: 0.6em 0.8em;
+      text-align: center;
+    }
+    .dialectic-item .label {
+      font-size: 0.5em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--dim);
+      margin-bottom: 0.4em;
+    }
+    .dialectic-item .content { font-size: 0.6em; color: #ccc; line-height: 1.5; }
+    .dialectic-item.thesis { border-top: 2px solid var(--accent2); }
+    .dialectic-item.antithesis { border-top: 2px solid var(--accent3); }
+    .dialectic-item.synthesis { border-top: 2px solid var(--accent); }
+
+    .protocol-pillars {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin: 0.8em 0;
+    }
+    .protocol-pillar { text-align: center; font-size: 0.65em; }
+    .protocol-pillar .icon { font-size: 1.6em; margin-bottom: 0.2em; }
+    .protocol-pillar .plabel { color: var(--accent); font-weight: 700; }
+    .protocol-pillar .desc { color: #999; font-size: 0.85em; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- SLIDE 1: Title -->
+<section>
+  <div class="title-slide">
+    <h1>Atmospheric Reviews</h1>
+    <div class="subtitle">Modular Research as a Commons</div>
+    <br>
+    <div class="meta">
+      Torsten Goerke<br>
+      Technische Universität Dresden<br>
+      Center for Open Digital Innovation and Participation (CODIP)<br>
+      <br>
+      Guest Lecture · Simon Fraser University, School of Computing Science · 2026<br>
+      <span style="color: var(--accent)">@tgoerke.bsky.social</span>
+    </div>
+  </div>
+  <aside class="notes">Brief orientation — this talk moves from a provocation about what research communication could be, through the theoretical and practical infrastructure that makes it possible, to live community work happening right now.</aside>
+</section>
+
+<!-- SLIDE 2: What If -->
+<section>
+  <div class="act-label">Act 0 — The Utopia</div>
+  <h2>What If</h2>
+  <div class="big-q">What if your most-cited figure could be cited independently of the paper it's in?</div>
+  <ul>
+    <li>A dataset you built in 2019 accrued credit every time someone reused it — <strong>regardless of platform</strong></li>
+    <li>Your community defined what "peer review" means for your discipline — <strong>not a journal</strong></li>
+    <li>Your researcher identity moved with you — <strong>not with your institution or publisher</strong></li>
+    <li>You had the vocabulary to describe what you actually produce — including <strong>artistic practices, co-creation, and cultural work</strong> — not just what a platform's affordances allow you to call it</li>
+  </ul>
+  <blockquote>
+    "We need a seamless formal research environment — a standard protocol for easily modular publishing — with outputs interoperable across platforms."
+    <cite>— Reuse Incentive Working Group, March 2026</cite>
+  </blockquote>
+  <aside class="notes">Open with the provocation, let it sit, then ground it in a real researcher's voice from the WG. The vocabulary point seeds the "specify vs select" distinction on slide 12. The closing line is the thesis — "hatch" will be defined and unpacked through the talk.</aside>
+</section>
+
+<!-- SLIDE 3: From Albums to Streams -->
+<section>
+  <div class="act-label">Act 0 — The Utopia</div>
+  <h2>From Albums to Streams</h2>
+  <blockquote>
+    "The question is not whether scientific communication will evolve, but how that evolution will be shaped, and by whom."
+    <cite>— Courtney Babott &amp; Rowan Cockett, <em>From Albums to Streams</em> (2026) · Keynote speakers, ATScience 2026, Vancouver</cite>
+  </blockquote>
+  <p style="font-size:0.68em; color:#ccc; margin-bottom:0.4em">Music changed when infrastructure made it possible to <strong>break apart bundled products</strong> and move value through <strong>use</strong> rather than <strong>control</strong>. The PDF bundles research the same way.</p>
+  <p style="font-size:0.65em; color: var(--accent); font-weight:600; margin-bottom:0.3em">ATScience 2026 ecosystem — already building:</p>
+  <div class="project-grid">
+    <div class="project-item"><strong>Chive</strong><span>Decentralized eprints on ATProto</span></div>
+    <div class="project-item"><strong>Margin.at / Seams.so</strong><span>Social annotation in the atmosphere</span></div>
+    <div class="project-item"><strong>Lanyards</strong><span>Researcher profiles on ATProto</span></div>
+    <div class="project-item"><strong>Semble</strong><span>Social knowledge network for research</span></div>
+    <div class="project-item"><strong>Paper Skygest Feed</strong><span>Personalized research feeds on Bluesky</span></div>
+    <div class="project-item"><strong>Groundmist.xyz</strong><span>Obsidian integrated with ATProto</span></div>
+    <div class="project-item"><strong>Astrosky</strong><span>Independent home for astronomy</span></div>
+    <div class="project-item"><strong>Hypgen Infinity</strong><span>Evaluating scientific AI agents on ATProto</span></div>
+  </div>
+  <aside class="notes">Babott &amp; Cockett are keynoting ATScience — a few days from now. The project list shows this is not a vision but a live ecosystem. The music analogy is theirs — the research application is ours.</aside>
+</section>
+
+<!-- SLIDE 4: POSIWID -->
+<section>
+  <div class="act-label">Act 1 — The Problem</div>
+  <h2>POSIWID</h2>
+  <p style="font-size:0.72em; color:#ccc; margin-bottom:0.4em"><em>The purpose of a system is what it does.</em> — Stafford Beer, via Larens Hof, "The Purpose of Protocols" (2026)</p>
+  <ul>
+    <li>SMTP, HTTP, RSS — claimed to be <strong>neutral infrastructure</strong></li>
+    <li>Their silence on governance was not apolitical — it was a <strong>choice</strong></li>
+    <li>The outcome: concentration of authority, lock-in, passive user</li>
+  </ul>
+  <table>
+    <tr><th>Platform</th><th>Claimed purpose</th><th>Actual outcome</th></tr>
+    <tr><td>Journal systems</td><td>Disseminate knowledge</td><td>Subscription lock-in, copyright transfer</td></tr>
+    <tr><td>Preprint servers</td><td>Open access</td><td>Single-platform indexing monopolies</td></tr>
+    <tr><td>Citation indexes</td><td>Track impact</td><td>Commercialized metrics, opaque algorithms</td></tr>
+  </table>
+  <aside class="notes">Hof's POSIWID framing is the conceptual anchor for Act 1. The audience will recognise this immediately — they live in the research system. The point is structural, not accidental.</aside>
+</section>
+
+<!-- SLIDE 5: The Governance Vacuum -->
+<section>
+  <div class="act-label">Act 1 — The Problem</div>
+  <h2>The Governance Vacuum in Research</h2>
+  <ul>
+    <li>User lock-in → data commercialization → <strong>enshittification</strong>: platform quality degrades as users lose alternatives</li>
+    <li>Research platforms follow identical topology: proprietary infrastructure, opaque algorithms, extraction of community labor</li>
+    <li>Affordances researchers get: <strong>submit · review · publish · cite</strong> — designed for an undifferentiated "everyone" that doesn't exist</li>
+  </ul>
+  <blockquote>
+    "Protocol design can constrain how actors operate within a system, but it cannot ensure the conditions that keep the broader ecosystem functioning."
+    <cite>— Hof, 2026</cite>
+  </blockquote>
+  <p style="font-size:0.65em; color: var(--accent); font-weight: 600; margin-bottom: 0.2em">No current research platform implements Ostrom's commons principles:</p>
+  <div style="display:flex; gap:0.5em; flex-wrap:wrap">
+    <span class="pill">Defined community boundaries</span>
+    <span class="pill">Collective choice mechanisms</span>
+    <span class="pill">Accessible conflict resolution</span>
+    <span class="pill">Proportional cost/benefit distribution</span>
+  </div>
+  <aside class="notes">The Ostrom reference sets up the solution — the hatching framework is explicitly built on Ostrom's principles. Name this connection so the audience tracks the throughline.</aside>
+</section>
+
+<!-- SLIDE 6: User/Developer Dualism -->
+<section>
+  <div class="act-label">Act 1 — The Problem</div>
+  <h2>The User/Developer Dualism</h2>
+  <ul>
+    <li>Communities <em>select</em> from a platform-defined set: submit, cite, download, share</li>
+    <li>They cannot <em>specify</em>: what counts as a contribution, how credit flows, what review means for their discipline</li>
+    <li>The user/developer dualism is an industrial narrative — "platforms build, researchers use"</li>
+  </ul>
+  <p style="font-size:0.7em; color: var(--accent); font-weight:700; margin: 0.5em 0 0.3em">The researcher loses two things:</p>
+  <div class="two-col">
+    <div class="card">
+      <h4>The Process</h4>
+      <p>AI tools optimized for task completion deliver outputs, not understanding. The cognitive work of science is outsourced.</p>
+    </div>
+    <div class="card">
+      <h4>The Literacy</h4>
+      <p>The capacity to carry out peer review, evaluate evidence, situate claims — eroded by fluency illusion and metacognition bypass.</p>
+    </div>
+  </div>
+  <blockquote style="margin-top:0.5em">
+    "Hyper-individualism — including AI-assisted 'vibe coding' — emerges as its latest manifestation."
+    <cite>— Goerke &amp; Barthold, <em>Information Civics as Counter-Imaginary</em> (2026)</cite>
+  </blockquote>
+  <aside class="notes">The two losses set up AIDLE later. Researchers don't just lose agency over infrastructure — they lose the cognitive capacity that makes peer review meaningful.</aside>
+</section>
+
+<!-- SLIDE 7: Protocols -->
+<section>
+  <div class="act-label">Act 2 — Protocols as the Hinge</div>
+  <h2>Protocols: Hard to Study, Easy to Ignore</h2>
+  <blockquote>"Hard to study and easy to ignore."<cite>— Rao et al., <em>The Unreasonable Sufficiency of Protocols</em> (2023)</cite></blockquote>
+  <table>
+    <tr><th>Framework</th><th>What protocols are</th><th>What they enable</th></tr>
+    <tr><td>Actor-Network Theory (Latour)</td><td>Bridge between ontologies</td><td>Agency in heterogeneous networks</td></tr>
+    <tr><td>Assemblages (Deleuze/Guattari)</td><td>Sites of emergent properties</td><td>Connections through shared experience</td></tr>
+    <tr><td>Cybernetics (Wiener)</td><td>Governance of communication</td><td>Coordination across realms</td></tr>
+  </table>
+  <p style="font-size:0.68em; color:#ccc; margin-top:0.5em">Engineering ontologies (objects, functions, interfaces) must translate into social ontologies (power, identity, norms, credit). Protocols are the translation layer — but they are <strong>not neutral</strong>.</p>
+  <aside class="notes">For a computing audience, ANT and assemblage theory may be new — the table makes it tractable. Key takeaway: protocols encode governance assumptions whether or not designers intend them to.</aside>
+</section>
+
+<!-- SLIDE 8: Governance Ladder -->
+<section>
+  <div class="act-label">Act 2 — Protocols as the Hinge</div>
+  <h2>The Governance Ladder</h2>
+  <div class="ladder">
+    <div class="ladder-item">
+      <div class="ladder-label">Early protocols</div>
+      <div class="ladder-text">SMTP, HTTP, RSS — silent on governance → enabled monopolies through <strong>mimetic convergence</strong></div>
+    </div>
+    <div class="ladder-item">
+      <div class="ladder-label">ActivityPub</div>
+      <div class="ladder-text">Explicit about decentralization → recreates platform dynamics at instance level; governance by administrator discretion</div>
+    </div>
+    <div class="ladder-item">
+      <div class="ladder-label" style="color:var(--accent)">AT Protocol</div>
+      <div class="ladder-text">Most normatively explicit — "speech and reach should be two separate layers" → but Bluesky still dominates through market dynamics</div>
+    </div>
+  </div>
+  <blockquote style="margin-top:0.6em">
+    "Protocol architecture shapes which governance mechanisms are 'natural' — but cannot enforce them."
+    <cite>— Hof, 2026</cite>
+  </blockquote>
+  <aside class="notes">The ladder is the key pedagogical move. Each protocol generation is more self-aware about governance — but awareness ≠ outcome. This is why architecture alone is insufficient, and why hatching matters.</aside>
+</section>
+
+<!-- SLIDE 9: Hatching -->
+<section>
+  <div class="act-label">Act 2 — Protocols as the Hinge</div>
+  <h2>Hatching: Initializing the Commons</h2>
+  <blockquote>
+    "Engineering any complex system is a consideration of its initialization conditions — in a Commons, we call these initial conditions the 'Hatch'."
+    <cite>— Commons Stack (via Goerke &amp; Barthold, 2025)</cite>
+  </blockquote>
+  <ul>
+    <li>Not just building — co-constructing <strong>topology AND governance simultaneously</strong></li>
+    <li>Not layering democracy onto pre-built infrastructure — designing democratic conditions <strong>from the start</strong></li>
+    <li>The <strong>governor-engineer</strong> role: translating social frameworks into actionable technical steps</li>
+  </ul>
+  <p style="font-size:0.65em; color: var(--accent); font-weight:700; margin: 0.5em 0 0.3em">The 5-step governance pipeline:</p>
+  <div style="display:flex; gap:0.4em; flex-wrap:wrap">
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">① Identify initial conditions</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">② Introduce governor-engineer role</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">③ Apply technical knowledge</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">④ Shift focus to users</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">⑤ Implement deliberative practice</span>
+  </div>
+  <aside class="notes">This is your own work — speak to it directly. The hatching concept names what's missing from Hof's diagnosis and frames what Atmospheric Reviews is actually attempting.</aside>
+</section>
+
+<!-- SLIDE 10: Why ATScience -->
+<section>
+  <div class="act-label">Act 3 — AT Protocol as Substrate</div>
+  <h2>Why ATScience</h2>
+  <p style="font-size:0.7em; color:#ccc; margin-bottom:0.4em"><strong style="color:var(--accent)">ATScience</strong> — empowering science communities with open, democratic, researcher-owned infrastructure. <span class="muted">(atproto.science · co-founded by Ronen Tamari, Torsten Goerke, Barry Prendergast)</span></p>
+  <div class="two-col">
+    <div>
+      <p style="font-size:0.65em; color:var(--accent); font-weight:700; margin-bottom:0.3em">Why AT Protocol as research substrate:</p>
+      <ul>
+        <li><strong>Sovereign identity</strong> — researcher identity independent of publisher, platform, institution</li>
+        <li><strong>Portable data</strong> — research objects travel with provenance intact</li>
+        <li><strong>Speech/reach separation</strong> — publishing ≠ amplification</li>
+        <li><strong>Credible exit</strong> — structural condition for community self-determination</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card" style="border-top-color:var(--accent3)">
+        <h4 style="color:var(--accent3)">ATScience 2026</h4>
+        <p>March 27 · Vancouver<br>A full-day exploration of AT Protocol in science, education, and open knowledge.</p>
+        <p style="color:var(--accent); font-weight:700; margin-top:0.4em">10+ projects building. The hatch is in progress.</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">You are a co-founder of ATScience — speak from the inside. The conference is in 4 days. This is not a future vision; it is a present reality being shaped right now.</aside>
+</section>
+
+<!-- SLIDE 11: Atmospheric Reviews -->
+<section>
+  <div class="act-label">Act 3 — AT Protocol as Substrate</div>
+  <h2>Atmospheric Reviews: The Hatch in Progress</h2>
+  <table>
+    <tr><th>Hatching step</th><th>Research commons equivalent</th></tr>
+    <tr><td>① Enable Deliberation</td><td>What affordances does this research community need?</td></tr>
+    <tr><td>② Algorithmic Choice</td><td>Community-governed discovery and curation</td></tr>
+    <tr><td>③ Sovereign Identity</td><td>Researcher identity independent of publisher/platform</td></tr>
+    <tr><td>④ Implement Rules</td><td>Governance encoded at protocol level</td></tr>
+  </table>
+  <ul style="margin-top:0.5em">
+    <li>Modular research objects as <strong>first-class protocol citizens</strong></li>
+    <li>Review, curation, annotation as <strong>specifiable community affordances</strong> — not platform defaults</li>
+    <li>The hatch sets governance conditions <strong>before concentration can occur</strong></li>
+  </ul>
+  <aside class="notes">Atmospheric Reviews is not a finished product — it is a hatch. The governance conditions are being designed now, deliberately, with the community that will use them.</aside>
+</section>
+
+<!-- SLIDE 12: From Select to Specify -->
+<section>
+  <div class="act-label">Act 3 — AT Protocol as Substrate</div>
+  <h2>From Select to Specify</h2>
+  <blockquote>
+    "Communities should <strong>specify</strong> affordances for situated needs — not <strong>select</strong> from a platform-defined set."
+    <cite>— Goerke &amp; Barthold, <em>Information Civics as Counter-Imaginary</em> (2026)</cite>
+  </blockquote>
+  <div class="two-col">
+    <div class="card" style="border-top-color:var(--accent2)">
+      <h4 style="color:var(--accent2)">Current platforms (select)</h4>
+      <div style="display:flex;flex-wrap:wrap;gap:0.3em;margin-top:0.3em">
+        <span class="pill">submit</span><span class="pill">review</span><span class="pill">publish</span><span class="pill">cite</span><span class="pill">download</span>
+      </div>
+    </div>
+    <div class="card">
+      <h4>AT Protocol commons (specify)</h4>
+      <ul>
+        <li>What counts as a <em>contribution</em>?</li>
+        <li>How does <em>credit</em> flow — to figure, dataset, method?</li>
+        <li>What does <em>review</em> mean — and who does it?</li>
+        <li>What is <em>reuse</em> and when is attribution required?</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:0.65em; color:#ccc; margin-top:0.5em"><strong>Information Civics:</strong> Network architecture as civic design. Not what algorithms <em>can</em> do — but what kinds of collective futures communities <em>want</em> to build, and with what authority.</p>
+  <aside class="notes">This is the thesis statement of the talk. Everything before builds to this distinction; everything after demonstrates it in practice.</aside>
+</section>
+
+<!-- SLIDE 13: Reuse Incentive WG -->
+<section>
+  <div class="act-label">Act 4 — Community in Motion</div>
+  <h2>Reuse Incentive Working Group</h2>
+  <p style="font-size:0.68em; color:#ccc; margin-bottom:0.3em"><em>Creative Commons + Continuous Science Foundation · Feb–March 2026</em></p>
+  <ul>
+    <li>~30 members: researchers, librarians, publishers, funders, technologists, infrastructure builders — global</li>
+    <li>Goal: surface friction around reuse and licensing of modular research; produce framework and recommendations</li>
+    <li>3 meetings across 6 weeks — Meeting #3 was recently (March 19, 2026)</li>
+  </ul>
+  <blockquote style="margin-top:0.5em">
+    "Reuse is still treated as optional or downstream. What would it look like to treat reuse — and the permission to reuse — as <strong>core infrastructure</strong> for how science is shared?"
+    <cite>— WG framing question, Feb 2026</cite>
+  </blockquote>
+  <aside class="notes">Name this explicitly — you are a participant-researcher. The WG is an instance of the commons in formation: global, interdisciplinary, deliberative. The question is Ostrom-compatible: permissions as infrastructure, not policy.</aside>
+</section>
+
+<!-- SLIDE 14: What Does Modular Research Actually Need -->
+<section>
+  <div class="act-label">Act 4 — Community in Motion</div>
+  <h2>What Does Modular Research Actually Need?</h2>
+  <div class="friction-grid">
+    <div class="friction-card green">
+      <h4>Publishing for reuse</h4>
+      <ul>
+        <li>Know <em>if and how</em> to reuse a component as primary source</li>
+        <li>Know <em>if and how</em> to license their own components</li>
+        <li>Know <em>what</em> proper licensing requires</li>
+      </ul>
+    </div>
+    <div class="friction-card blue">
+      <h4>Setting attribution expectations</h4>
+      <ul>
+        <li>Track attribution per component, Panel of Evidence, Paper Repo</li>
+        <li>Distinguish citations for primary vs. secondary sources</li>
+      </ul>
+    </div>
+    <div class="friction-card pink">
+      <h4>Reuser guidance</h4>
+      <ul>
+        <li>Know what the license requires</li>
+        <li>Easily comply with license terms</li>
+        <li>Track their own compliance</li>
+      </ul>
+    </div>
+    <div class="friction-card yellow">
+      <h4>Outside the PDF</h4>
+      <ul>
+        <li>Prevent gaming of citation metrics</li>
+        <li>Standard protocol for modular publishing, interoperable across platforms</li>
+        <li>Attribution during informal sharing</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">These needs were surfaced through structured breakout discussion across 3 groups. They are not hypothetical — they are the friction researchers named when actually trying to work with modular components.</aside>
+</section>
+
+<!-- SLIDE 15: Citation as Currency -->
+<section>
+  <div class="act-label">Act 4 — Community in Motion</div>
+  <h2>Citation as Currency</h2>
+  <blockquote>
+    "Citation as currency — but citations have no sentiment: support, reject, oppose. The hazard is that this might be gamed."
+    <cite>— Reuse Incentive Working Group, March 2026</cite>
+  </blockquote>
+  <p style="font-size:0.68em; color:var(--accent); font-weight:700; margin:0.5em 0 0.3em">What modular research requires instead:</p>
+  <ul>
+    <li>Attribution that propagates <strong>downward</strong> — to sub-components, figures, datasets, methods</li>
+    <li>Credit that travels <strong>across platforms</strong> — not locked to a single index</li>
+    <li>Licensing embedded at the <strong>object level</strong> — not as a separate document</li>
+  </ul>
+  <p style="font-size:0.65em; color:var(--accent); font-weight:700; margin:0.5em 0 0.2em">TASLAR metadata standard (per research object):</p>
+  <div style="display:flex;gap:0.4em;flex-wrap:wrap">
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">Title</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">Author</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">Source Link</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">License Link</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">Attribution Statement</span>
+    <span class="pill" style="border-color:var(--accent);color:var(--accent)">Rights Statement</span>
+  </div>
+  <blockquote style="margin-top:0.5em">"Machine automation: embedding attribution as a cultural norm, and not just as a legal requirement."</blockquote>
+  <aside class="notes">TASLAR is the practical instantiation of what sovereign, portable attribution looks like at protocol level. Connect this back to AT Protocol's data architecture.</aside>
+</section>
+
+<!-- SLIDE 16: AIDLE -->
+<section>
+  <div class="act-label">Act 5 — The Research Horizon <span class="tag tag-wip">WIP</span></div>
+  <h2>AIDLE: A Research Agenda</h2>
+  <p style="font-size:0.68em;color:#ccc;margin-bottom:0.4em">The remaining gap: who has the capacity to co-design? The governor-engineer role requires both technical and governance literacy — and AI tools as currently designed are making that rarer.</p>
+  <div class="dialectic">
+    <div class="dialectic-item thesis">
+      <div class="label">Thesis</div>
+      <div class="content">Vibe coding = task completion = the latest form of the user/developer dualism</div>
+    </div>
+    <div class="dialectic-item antithesis">
+      <div class="label">Antithesis</div>
+      <div class="content">Hatching a commons — communities specifying affordances, deliberative co-design</div>
+    </div>
+    <div class="dialectic-item synthesis">
+      <div class="label">Synthesis</div>
+      <div class="content"><strong>AIDLE</strong> — AI redesigned for human capability development, not task completion</div>
+    </div>
+  </div>
+  <ul style="margin-top:0.5em">
+    <li>AI that knows when <strong>not</strong> to answer — scaffolds co-design rather than completing tasks</li>
+    <li>Skill Trajectory Modeling: tracks capability gaps, not preferences</li>
+    <li>Atmospheric Reviews as testbed: agentic tools that scaffold <strong>protocol co-design</strong> for research communities</li>
+  </ul>
+  <blockquote style="margin-top:0.4em">"Not what algorithms <em>can</em> do — but what kinds of collective futures communities <em>want</em> to build."</blockquote>
+  <aside class="notes">Keep this a provocation, not a product pitch. The same critique leveled at research platforms applies to AI tools — and the same solution applies. AIDLE is where this becomes a research agenda.</aside>
+</section>
+
+<!-- SLIDE 17: Close -->
+<section>
+  <div class="act-label">Act 6 — Close</div>
+  <h2>Protocol-Mediated Agency</h2>
+  <p style="font-size:0.7em;color:#ccc">The PDF bundled research the way albums bundled music. AT Protocol gives us the infrastructure to unbundle — and re-bundle on community terms.</p>
+  <div class="protocol-pillars">
+    <div class="protocol-pillar">
+      <div class="icon">🔑</div>
+      <div class="plabel">Specify</div>
+      <div class="desc">affordances for your community</div>
+    </div>
+    <div class="protocol-pillar">
+      <div class="icon">🏗</div>
+      <div class="plabel">Hatch</div>
+      <div class="desc">governance before concentration</div>
+    </div>
+    <div class="protocol-pillar">
+      <div class="icon">🌐</div>
+      <div class="plabel">Own</div>
+      <div class="desc">identity, data, relationships</div>
+    </div>
+  </div>
+  <p class="muted" style="margin-bottom:0.5em">Hatching is underway: Reuse Incentive WG · ATScience 2026 (March 27, Vancouver) · Atmospheric Reviews · AIDLE</p>
+  <div class="big-q">What affordances does your research community need to specify — and who currently decides?</div>
+  <p class="muted" style="text-align:center;margin-top:0.6em">Torsten Goerke · @tgoerke.bsky.social · atproto.science</p>
+  <aside class="notes">Land on the open question. Let it breathe. Don't answer it — that's the work.</aside>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    progress: true,
+    controls: true,
+    center: false,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    backgroundTransition: 'fade',
+    plugins: []
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1500" height="500" fill="#0c0b0a"/>
+
+  <!-- Horizontal rails -->
+  <rect x="0" y="30"  width="1500" height="14" rx="4" fill="#1a1814"/>
+  <rect x="0" y="456" width="1500" height="14" rx="4" fill="#1a1814"/>
+
+  <!-- Rail screws -->
+  <circle cx="30"   cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="200"  cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="400"  cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="600"  cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="800"  cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="1000" cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="1200" cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="1400" cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="1470" cy="37"  r="5" fill="#0c0b0a"/>
+  <circle cx="30"   cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="200"  cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="400"  cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="600"  cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="800"  cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="1000" cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="1200" cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="1400" cy="463" r="5" fill="#0c0b0a"/>
+  <circle cx="1470" cy="463" r="5" fill="#0c0b0a"/>
+
+  <!-- Module panel (left side, 460×460) -->
+  <rect x="30" y="20" width="460" height="460" rx="6" fill="#c4a882"/>
+
+  <!-- Jack sockets at M anchor points -->
+  <!-- bottom-left -->
+  <circle cx="124" cy="393" r="27" fill="#0c0b0a"/>
+  <circle cx="124" cy="393" r="16" fill="#1a1814"/>
+  <!-- top-left -->
+  <circle cx="124" cy="107" r="27" fill="#0c0b0a"/>
+  <circle cx="124" cy="107" r="16" fill="#1a1814"/>
+  <!-- centre dip (amber) -->
+  <circle cx="260" cy="241" r="27" fill="#0c0b0a"/>
+  <circle cx="260" cy="241" r="16" fill="#3a2800"/>
+  <circle cx="260" cy="241" r="9"  fill="#e8a020"/>
+  <!-- top-right -->
+  <circle cx="395" cy="107" r="27" fill="#0c0b0a"/>
+  <circle cx="395" cy="107" r="16" fill="#1a1814"/>
+  <!-- bottom-right -->
+  <circle cx="395" cy="393" r="27" fill="#0c0b0a"/>
+  <circle cx="395" cy="393" r="16" fill="#1a1814"/>
+
+  <!-- Patch cables (M shape) -->
+  <!-- left arm: BL→TL→CM  red -->
+  <path d="M 124 393 C 88 298,88 178,124 107 C 151 93,212 165,260 241"
+        fill="none" stroke="#e63946" stroke-width="17" stroke-linecap="round"/>
+  <!-- right arm: CM→TR→BR  blue -->
+  <path d="M 260 241 C 308 165,369 93,395 107 C 432 177,432 298,395 393"
+        fill="none" stroke="#4a90d9" stroke-width="17" stroke-linecap="round"/>
+
+  <!-- Wordmark (right side) -->
+  <text x="550" y="270"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="130"
+        font-weight="300"
+        letter-spacing="-4"
+        fill="#c4a882">malleable</text>
+  <text x="550" y="390"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="130"
+        font-weight="300"
+        letter-spacing="-4"
+        fill="#c4a882">music</text>
+
+  <!-- Tagline -->
+  <text x="554" y="430"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="28"
+        font-weight="400"
+        letter-spacing="8"
+        fill="#8a857e">NETWORKED MUSIC ENSEMBLES</text>
+</svg>

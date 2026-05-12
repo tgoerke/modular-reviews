@@ -1,0 +1,35 @@
+schema: hugoblox/author/v1
+slug: torsten-goerke
+is_owner: true
+name:
+  display: Torsten Goerke
+  given: Torsten
+  family: Goerke
+postnominals: []
+status:
+  icon: "📝"
+role: atproto.science co-lead
+email: hello@atmospheric.reviews
+bio: |
+  Co-lead of atproto.science. Working on modular peer review,
+  AT Protocol-based research infrastructure, and federated
+  knowledge accumulation.
+
+links:
+  - icon: at-symbol
+    url: mailto:hello@atmospheric.reviews
+    label: hello@atmospheric.reviews
+  - icon: brands/github
+    url: https://github.com/tgoerke
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/tgoerke.bsky.social
+    label: Bluesky
+
+interests:
+  - Modular Review
+  - AT Protocol
+  - ATScience
+  - Federated Research
+
+user_groups:
+  - Team

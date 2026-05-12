@@ -1,14 +1,20 @@
 {
-  "name": "atmospheric-reviews",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "site",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --minify && pnpm run pagefind",
+    "lint": "echo 'TODO: add lint script'",
+    "pagefind": "pagefind --site public"
   },
   "dependencies": {
-    "astro": "^5.16.15"
-  }
+    "@tailwindcss/cli": "^4.1.12",
+    "@tailwindcss/typography": "^0.5.10",
+    "pagefind": "^1.4.0",
+    "preact": "^10.27.2",
+    "tailwindcss": "^4.1.12"
+  },
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.14.0",
+  "description": "Modern developer portfolio template for Hugo Blox with Tailwind CSS v4 - Free version"
 }

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="5" fill="#0c0b0a"/>
+  <!-- left arm of M: bottom-left → top-left → centre dip (red cable) -->
+  <path d="M 5 27 C 3 18,3 10,5 5 C 9 5,13 12,16 18"
+        fill="none" stroke="#e63946" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- right arm of M: centre dip → top-right → bottom-right (blue cable) -->
+  <path d="M 16 18 C 19 12,23 5,27 5 C 29 10,29 18,27 27"
+        fill="none" stroke="#4a90d9" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- jack sockets at the five M anchor points -->
+  <circle cx="5"  cy="27" r="2" fill="#8a857e"/>
+  <circle cx="5"  cy="5"  r="2" fill="#8a857e"/>
+  <circle cx="16" cy="18" r="2" fill="#e8a020"/>
+  <circle cx="27" cy="5"  r="2" fill="#8a857e"/>
+  <circle cx="27" cy="27" r="2" fill="#8a857e"/>
+</svg>

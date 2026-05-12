@@ -1,0 +1,44 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="120" fill="#0c0b0a"/>
+
+  <!-- Top rail -->
+  <rect x="4" y="10" width="112" height="5" rx="2" fill="#8a857e"/>
+  <!-- Bottom rail -->
+  <rect x="4" y="105" width="112" height="5" rx="2" fill="#8a857e"/>
+
+  <!-- Mounting screws -->
+  <circle cx="10"  cy="12.5" r="2" fill="#0c0b0a"/>
+  <circle cx="110" cy="12.5" r="2" fill="#0c0b0a"/>
+  <circle cx="10"  cy="107.5" r="2" fill="#0c0b0a"/>
+  <circle cx="110" cy="107.5" r="2" fill="#0c0b0a"/>
+
+  <!-- Module panel -->
+  <rect x="8" y="15" width="104" height="90" fill="#c4a882"/>
+
+  <!-- Jack sockets at the five M anchor points -->
+  <!-- bottom-left -->
+  <circle cx="26" cy="95" r="5.5" fill="#0c0b0a"/>
+  <circle cx="26" cy="95" r="3"   fill="#1a1814"/>
+  <!-- top-left -->
+  <circle cx="26" cy="27" r="5.5" fill="#0c0b0a"/>
+  <circle cx="26" cy="27" r="3"   fill="#1a1814"/>
+  <!-- centre dip (amber accent) -->
+  <circle cx="60" cy="58" r="5.5" fill="#0c0b0a"/>
+  <circle cx="60" cy="58" r="3"   fill="#3a2800"/>
+  <circle cx="60" cy="58" r="1.5" fill="#e8a020"/>
+  <!-- top-right -->
+  <circle cx="94" cy="27" r="5.5" fill="#0c0b0a"/>
+  <circle cx="94" cy="27" r="3"   fill="#1a1814"/>
+  <!-- bottom-right -->
+  <circle cx="94" cy="95" r="5.5" fill="#0c0b0a"/>
+  <circle cx="94" cy="95" r="3"   fill="#1a1814"/>
+
+  <!-- Patch cables -->
+  <!-- left arm: BL(26,95)→TL(26,27)→CM(60,58)  red -->
+  <path d="M 26 95 C 18 72,18 46,26 27 C 32 27,50 44,60 58"
+        fill="none" stroke="#e63946" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- right arm: CM(60,58)→TR(94,27)→BR(94,95)  blue -->
+  <path d="M 60 58 C 70 44,88 27,94 27 C 102 46,102 72,94 95"
+        fill="none" stroke="#4a90d9" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

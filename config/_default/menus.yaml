@@ -1,0 +1,23 @@
+# Navigation Links
+#   To link a homepage section, use a hash `#` followed by the section ID.
+#   The weight parameter defines the order that the links appear.
+
+main:
+  - name: Problem
+    url: /#problem
+    weight: 10
+  - name: Protocol
+    url: /#protocol
+    weight: 20
+  - name: Approach
+    url: /#approach
+    weight: 30
+  - name: Talks
+    url: /talks/sfu-lecture.html
+    weight: 35
+  - name: About
+    url: /#about
+    weight: 40
+  - name: Contact
+    url: /#contact
+    weight: 50

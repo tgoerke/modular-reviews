@@ -1,0 +1,66 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="#0c0b0a"/>
+  <!-- Subtle inner border -->
+  <rect x="8" y="8" width="496" height="496" rx="74" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.06"/>
+
+  <!-- Top rail -->
+  <rect x="17" y="44" width="478" height="20" rx="5" fill="#8a857e"/>
+  <!-- Bottom rail -->
+  <rect x="17" y="448" width="478" height="20" rx="5" fill="#8a857e"/>
+
+  <!-- Mounting screws -->
+  <circle cx="43"  cy="54"  r="8" fill="#0c0b0a"/>
+  <line   x1="39" y1="54"  x2="47" y2="54"  stroke="#3a3530" stroke-width="2"/>
+  <circle cx="469" cy="54"  r="8" fill="#0c0b0a"/>
+  <line   x1="465" y1="54" x2="473" y2="54" stroke="#3a3530" stroke-width="2"/>
+  <circle cx="43"  cy="458" r="8" fill="#0c0b0a"/>
+  <line   x1="39" y1="458" x2="47" y2="458" stroke="#3a3530" stroke-width="2"/>
+  <circle cx="469" cy="458" r="8" fill="#0c0b0a"/>
+  <line   x1="465" y1="458" x2="473" y2="458" stroke="#3a3530" stroke-width="2"/>
+
+  <!-- Module panel -->
+  <rect x="34" y="64" width="444" height="384" fill="#c4a882"/>
+
+  <!-- Glow layers -->
+  <path d="M 111 406 C 77 307,77 196,111 115 C 137 115,213 188,256 248"
+        fill="none" stroke="#e63946" stroke-width="44" stroke-linecap="round" opacity="0.20"/>
+  <path d="M 256 248 C 299 188,375 115,401 115 C 435 196,435 307,401 406"
+        fill="none" stroke="#4a90d9" stroke-width="44" stroke-linecap="round" opacity="0.20"/>
+
+  <!-- Cables -->
+  <path d="M 111 406 C 77 307,77 196,111 115 C 137 115,213 188,256 248"
+        fill="none" stroke="#e63946" stroke-width="15" stroke-linecap="round"/>
+  <path d="M 256 248 C 299 188,375 115,401 115 C 435 196,435 307,401 406"
+        fill="none" stroke="#4a90d9" stroke-width="15" stroke-linecap="round"/>
+
+  <!-- Jack sockets — bottom-left -->
+  <circle cx="111" cy="406" r="24" fill="#0c0b0a"/>
+  <circle cx="111" cy="406" r="15" fill="#1a1614"/>
+  <circle cx="111" cy="406" r="7"  fill="#8a857e"/>
+  <circle cx="111" cy="406" r="3"  fill="#0c0b0a"/>
+
+  <!-- Jack sockets — top-left -->
+  <circle cx="111" cy="115" r="24" fill="#0c0b0a"/>
+  <circle cx="111" cy="115" r="15" fill="#1a1614"/>
+  <circle cx="111" cy="115" r="7"  fill="#8a857e"/>
+  <circle cx="111" cy="115" r="3"  fill="#0c0b0a"/>
+
+  <!-- Jack sockets — centre dip (amber) -->
+  <circle cx="256" cy="248" r="26" fill="#0c0b0a"/>
+  <circle cx="256" cy="248" r="16" fill="#2a1e00"/>
+  <circle cx="256" cy="248" r="8"  fill="#e8a020"/>
+  <circle cx="256" cy="248" r="3"  fill="#0c0b0a"/>
+
+  <!-- Jack sockets — top-right -->
+  <circle cx="401" cy="115" r="24" fill="#0c0b0a"/>
+  <circle cx="401" cy="115" r="15" fill="#1a1614"/>
+  <circle cx="401" cy="115" r="7"  fill="#8a857e"/>
+  <circle cx="401" cy="115" r="3"  fill="#0c0b0a"/>
+
+  <!-- Jack sockets — bottom-right -->
+  <circle cx="401" cy="406" r="24" fill="#0c0b0a"/>
+  <circle cx="401" cy="406" r="15" fill="#1a1614"/>
+  <circle cx="401" cy="406" r="7"  fill="#8a857e"/>
+  <circle cx="401" cy="406" r="3"  fill="#0c0b0a"/>
+</svg>

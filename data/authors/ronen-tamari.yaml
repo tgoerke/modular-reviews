@@ -1,0 +1,25 @@
+schema: hugoblox/author/v1
+slug: ronen-tamari
+is_owner: false
+name:
+  display: Ronen Tamari
+  given: Ronen
+  family: Tamari
+postnominals: []
+status:
+  icon: "🔬"
+role: cosmik.network · ATScience co-lead
+email: ""
+bio: |
+  Co-lead of atproto.science and the BiTS / ATScience portfolio.
+  Working on decentralized research infrastructure.
+
+links: []
+
+interests:
+  - ATScience
+  - Decentralized Research
+  - Science Publishing
+
+user_groups:
+  - Team

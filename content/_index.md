@@ -9,6 +9,7 @@ sections:
       username: torsten-goerke
       title: "Atmospheric Reviews"
       greeting: "Modular Peer Review for the Atmosphere"
+      logo: /media/atscience-logo.svg
       typewriter:
         enable: true
         prefix: "A "
